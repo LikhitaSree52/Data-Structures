@@ -21,8 +21,11 @@ int main()
         current->data=30;
         current->link=NULL;
         head->link->link=current;
+        printf("Original SLL\n");
+        traverse_SLL(head);
+        printf("\nReversed SLL\n");
         head=reverse_SLL(head);
-	traverse_SLL(head);
+	    traverse_SLL(head);
 	
 }
 struct node* reverse_SLL(struct node *head)
@@ -50,4 +53,5 @@ void traverse_SLL(struct node *head)
 		printf("%d->",temp->data);
 		temp=temp->link;
 	}
+	printf("NULL");
 }
